@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.num {
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.ojuju-text {
+    font-family: "Ojuju", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.type {
+    font-size: 45px;
+    font-weight: 600;
+    min-width: 280px;
+    height: 15vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 100%;
+    display: flex;
+    padding-top: 15px;
+}
+
+.type span {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.type span::before {
+    color: white;
+    position: relative;
+
+}
+
+.type span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% +8px);
+    height: 100%;
+    background-color: black;
+    color: white;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(8) infinite;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 40px;
+    margin-top: auto;
+    width: 100%;
+    margin-top: auto;
+}
+
+.icono {
+    max-width: 35px;
+    height: auto;
+
+}
+
+.proyectos{
+    display: flex;
+    flex-direction: row;/* 
+    align-items: flex-start; */
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.proyecto{
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-around;
+    
+    /* overflow: hidden;  */
+    
+}
+/* .proyecto img{
+    height: 250px;
+} */
+.image {
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    box-shadow: 0px 0px 5px #6A099B, 0px 0px 20px  #6A099B, 0px 0px 30px #6a099b;
+    margin: 35px;
+    overflow: hidden;/* 
+    margin: 15px auto; */
+    position: relative;
+    max-width: 100%;
+    filter: alpha(opacity=50);
+}
+
+.p-nom{
+    color: antiquewhite;
+    text-align: center;
+    min-width: 100%;
+    font-size: 30px;
+}
+figcaption p{
+    font-weight: bold;
+    text-align: center;
+}
+
+.image figcaption {
+    color: white;
+    font-family: 'Exo';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0; 
+    transition: all .23s ease;
+    width: 100%;
+    text-align: justify;
+}
+
+
+.image figcaption {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.image:hover>img {
+    opacity: 0.5;
+    filter: alpha(opacity=100);
+    transform: scale(1.1, 1.1);
+    /* 
+    visibility: hidden; */
+}
+
+.image:hover>figcaption {
+    opacity: 1;
+    visibility: visible;
+}
+
+.images{
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    
+/*     width: auto; */
+    height: auto;
+    box-shadow: 0px 0px 5px #0E7373, 0px 0px 20px  #0E7373, 0px 0px 30px #0E7373;
+    margin: 35px;
+    overflow: hidden;/* 
+    margin: 15px auto; */
+    position: relative;
+    max-width: 100%;
+    filter: alpha(opacity=50);
+}
+
+.images figcaption {
+    color:white;
+    font-family: 'Exo';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .23s ease;
+    width: 100%;  
+    text-align: justify;
+}
+
+.images figcaption {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.images:hover>img {
+    opacity: 0.5;
+    filter: alpha(opacity=100);
+    transform: scale(1.1, 1.1);
+    /* 
+    visibility: hidden; */
+}
+
+.images:hover>figcaption {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+figure img {
+    border-radius: 5px;
+    height: 100%;
+    transition: all .23s ease;
+    width: 100%;
+}
+
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+
+    }
+
+    25%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%,
+    100% {
+        width: calc(100% + 8px);
+
+    }
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid black;
+    }
+}
+
+@media (max-width: 670px) {
+    .proyectos {
+        flex-direction: column;
+        width: 100%;
+    }
+    .image, .images{
+        width: 50%;
+    }
+    figcaption p{
+        font-size: auto;
+    }
+
+}

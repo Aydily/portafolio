@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.num {
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.ojuju-text {
+    font-family: "Ojuju", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.type {
+    font-size: 45px;
+    font-weight: 600;
+    min-width: 280px;
+    height: 15vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 100%;
+    display: flex;
+    padding-top: 15px;
+}
+
+.type span {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.type span::before {
+    color: white;
+    position: relative;
+
+}
+
+.type span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% +8px);
+    height: 100%;
+    background-color: black;
+    color: white;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(8) infinite;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto{
+    padding: 80px;
+    font-size: 20px;
+}
+
+.form{
+    display: flex;
+    height: 100%;
+}
+
+
+.formulario label{
+    display: inline-block;
+    width: 80px;  /* 
+    text-shadow:  1px 2px rgb(12, 203, 44),
+    0 0 15px rgb(12, 203, 44),
+    0 0 2px blue; */
+}
+
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-height: 80px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.boton{
+    width: 30%;
+    padding: 1.5%;
+    color: white;
+    background-image: radial-gradient(#000000,#ffffff);
+    box-shadow: 0px 0px 5px linear-gradient(#35815c,#a01d1d),0px 0px 15px #1e5459, 0px 0px 20px  #1e5459, 0px 0px 30px #1e5459;
+    border: none;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 40px;
+    margin-top: auto;
+    /* 
+    bottom: 0; */
+    width: 100%;
+    margin-top: auto;
+}
+li{
+    list-style-type: none;
+}
+.icono {
+    max-width: 35px;
+    height: auto;
+
+}
+
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+
+    }
+
+    25%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%,
+    100% {
+        width: calc(100% + 8px);
+
+    }
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid black;
+    }
+}
+
+@media (max-width: 670px) {
+    .main   {
+        flex-direction: column;
+        width: 100%;
+    }
+    .button{
+        height: auto;
+    }
+    .contacto{
+        margin: auto;
+        padding: auto;
+    }
+}

@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.num{
+    font-weight: bold;
+}
+main{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.ojuju-text {
+    font-family: "Ojuju", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.type {
+    font-size: 45px;
+    font-weight: 600;
+    min-width: 280px;
+    height: 15vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 100%;
+    display: flex;
+    padding-top: 15px;
+}
+
+.type span {/* 
+    padding: 20px;
+    margin: 50px; */
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.type span::before {
+    color: white;
+    position: relative;/* 
+    content: "Acerca de mí"; */
+
+}
+
+.type span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% +8px);
+    height: 100%;
+    background-color: black;
+    color: white;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(12) infinite;
+}
+
+.description {
+    flex: 50%; 
+    margin: 50px;
+    padding: 10px;
+    text-align: justify;
+    box-sizing: content-box;
+    font-size: 20px;
+    height: 60%;
+}
+
+.image {
+    flex: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.me{
+    border-radius: 50%;
+    /* 
+    box-shadow:  0px 0px 15px 0.1px #00ffb2 ,  0px 0px 20px 0.3px #208063, 0px 0px 30px 0.4px #0acf35, 0px 0px 50px 0.5px #0dc423; */
+    box-shadow: 0px 0px 15px 0.1px #00ffb2, 0px 0px 20px 0.3px #00ffb2, 0px 0px 30px 0.4px #00ffb2, 0px 0px 50px 0.5px #00ffb2;
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height:  40px;
+    margin-top: auto;/* 
+    bottom: 0; */
+    width: 100%;
+    margin-top: auto;
+}
+
+.icono{
+    max-width: 35px;
+    height: auto;
+    
+}
+
+
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+
+    }
+
+    25%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%,
+    100% {
+        width: calc(100% + 8px);
+       
+    }
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid black;
+    }
+}
+
+@media (max-width: 200px){
+    body{
+        flex-direction: column;
+    }
+    .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
